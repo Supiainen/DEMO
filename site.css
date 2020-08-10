@@ -12,6 +12,13 @@ div {
     
 }
 
+.kentät {
+  padding: 5px;
+  border-style: ridge;
+  width: 15vw;
+  margin: 10px;
+}
+
 h1 {
     
     font-size: 4vw;
@@ -23,19 +30,6 @@ h1 {
   left:100px;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
 html {
   font-size: 14px;
   font-family: "Lucida Console", Courier, monospace;
@@ -43,6 +37,11 @@ html {
 @media (min-width: 768px) {
   html {
     font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
   }
 }
 
