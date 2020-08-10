@@ -1,0 +1,128 @@
+﻿
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+div {
+    background-color: white;
+    
+    padding: 20px;
+    
+}
+
+h1 {
+    
+    font-size: 4vw;
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+#takasin{
+  position: absolute;
+  left:100px;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem 0.75rem rgba(0, 0, 0, .5);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+  
+}
+li {
+  margin: 5px;
+  background-color: #dbe6c4;
+  color:#757d6f;;
+  padding: 2px;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-top: 50px;    
+    background-color: #dbe6c4;
+    text-align: center;
+    font-family: "Lucida Console", Courier, monospace;
+    background-image: url("kuvat\1.png");
+}
+.footer {
+  position: absolute;   
+  bottom: 0;
+  width: 60%;
+  white-space: nowrap;
+  line-height: 40px; /* Vertically center the text there */
+}
+
+#listanappi {
+    background-image: url('c:\bootcamp\demo\demosovellus\sovellus\kuvat\huomautus 2.png');
+}
+.toimintonapit {
+    box-shadow: inset 0px 11px 14px -3px #f2fadc;
+    background: linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+    background-color: #dbe6c4;
+    border-radius: 6px;
+    border: 1px solid #b2b8ad;
+    display: inline-block;
+    cursor: pointer;
+    color: #757d6f;
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 33px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ced9bf;
+    margin: 15px 1vw 15px 1vw;
+}
+
+.toimintonapit:hover {
+        background: linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
+        background-color: #9ba892;
+}
+
+    .toimintonapit:active {
+        position: relative;
+        top: 1px;
+    }
+
