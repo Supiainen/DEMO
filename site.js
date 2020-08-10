@@ -15,6 +15,8 @@ function Alkuun() {
     window.location = "Index.html";
 };
 
+//Osalistanapit
+
 function PalautaJuoksuLista(){
     document.getElementById("osat").innerHTML = "";
     for (let index = 0; index < juoksuLista.length; index++) {
@@ -34,7 +36,29 @@ function PalautaJokatLista(){
         
         element.pituus.toPrecision(3) + "m, Massa: " + element.paino.toPrecision(3) + "kg" + "</li>";   
     };  
-};        
+};
+//Massalaskuri
+
+var osienLisaysKentta = "";
+var osienMaaraKentta = 0;
+var kokonaisMassa = 0;
+
+function LisaaMassaa(){
+    osienLisaysKentta = document.getElementById("massanlisäyssyöte").value;
+    osienMaaraKentta = document.getElementById("massanmääräsyöte").value;
+    const lisaaOsaa = "";
+    const lisaaMassaa = 0; 
+    for (let i = 0; i < juoksuLista.length; i++) {
+        const objekti = juoksuLista[i];
+        if(osienLisaysKentta == objekti.haku){
+            document.getElementById("massalista").innerHTML += "<li>" + objekti.nimi + ": Oikea pituus: " +
+            objekti.pituus.toPrecision(3) + "m, Massa: " + objekti.paino.toPrecision(3) + "kg | " + OsienMaaraKentta + "kpl" + "</li>";
+            kokonaisMassa+=objekti.paino*osienMaaraKentta;
+            document.getElementById("summapaikka").innerHTML=kokonaisMassa;
+        } 
+    };
+};
+
 
 // Tästä alkaa osalistat
 

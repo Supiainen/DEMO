@@ -17,6 +17,7 @@ div {
   border-style: ridge;
   width: 15vw;
   margin: 10px;
+  border-radius: 2px;
 }
 
 h1 {
