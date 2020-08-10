@@ -14,14 +14,14 @@
     <h1>Telineen massalaskuri</h1>
 
     <div>
-        <input class="kentät" type="text" name="osa" id="osa"><br>
-        <input class="kentät" type="text" name="maara" id="maara">        
-        <br><br>
-
-        <input class="toimintonapit" type="button" Value="Lisää"
-         name="lisaa" id="lisäysnappinappi">
-         <input class="toimintonapit" type="button" Value="Tyhjennä"
-         name="tyhjennä" id="Tyhjennä">
+        <form action="/action_page.php">
+            <label for="fname">&nbsp; Osa:</label>
+            <input class="kentät" type="text" id="fname" name="fname" value="2.5m juoksu"><br><br>
+            <label for="lname">Määrä:</label>
+            <input class="kentät" type="text" id="lname" name="lname" value="10"><br><br>
+            <input class="toimintonapit" type="submit" value="Submit">
+            <input class="toimintonapit" type="submit" value="Submit">
+          </form>
          <ul id="massalista">
 
          </ul>
