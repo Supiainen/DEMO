@@ -15,7 +15,7 @@ function Alkuun() {
     window.location = "Index.html";
 };
 
-//Osalistanapit
+//Osalistan Toiminnot
 
 function PalautaJuoksuLista() {
     document.getElementById("osat").innerHTML = "";
@@ -60,7 +60,7 @@ function LisaaMassaa() {
 
     for (let index = 0; index < juoksuLista.length; index++) {
         const element = juoksuLista[index];
-        if (element.haku == osienLisaysKentta) {
+        if (element.haku.toUpperCase() == osienLisaysKentta.toUpperCase()) {
             kokonaisMassa += osienMaaraKentta * element.paino;
             document.getElementById("summapaikka").innerHTML = kokonaisMassa + "kg";
             document.getElementById("massalista").innerHTML += "<li>" + osienMaaraKentta + " kpl " +
@@ -71,7 +71,7 @@ function LisaaMassaa() {
 
     for (let index = 0; index < jokatLista.length; index++) {
         const element = jokatLista[index];
-        if (element.haku == osienLisaysKentta) {
+        if (element.haku.toUpperCase() == osienLisaysKentta.toUpperCase()) {
             kokonaisMassa += osienMaaraKentta * element.paino;
             document.getElementById("summapaikka").innerHTML = kokonaisMassa + "kg";
             document.getElementById("massalista").innerHTML += "<li>" + osienMaaraKentta + " kpl " +
@@ -81,6 +81,8 @@ function LisaaMassaa() {
 
 
 };
+
+// Pituuslaskuri
 
 // Tästä alkaa osalistat
 
@@ -98,7 +100,18 @@ var jokatLista = [
     { haku: "2m juoksuvahvari", nimi: "U-kaksoisjuoksu 2,07 m, teräs LW", pituus: 2.07, paino: 12.7 },
     { haku: "1,5m juoksuvahvari", nimi: "U-kaksoisjuoksu 1,57 m, teräs LW", pituus: 1.57, paino: 7.4 },
     { haku: "1m jokka", nimi: "U-jokka, vahv. 1,09 m", pituus: 1.09, paino: 5.7 },
-    { haku: "3m vahvari", nimi: "U-jokka vahv. 3,07 m LW T14", pituus: 1.40, paino: 19.0 }
+    { haku: "3m vahvari", nimi: "U-jokka vahv. 3,07 m LW T14", pituus: 1.40, paino: 19.0 },
+    { haku: "0,45 jokka", nimi: "U-jokka 0,45 m LW T14", pituus: 0.40, paino: 2.1 },
+    { haku: "0,73 jokka", nimi: "U-jokka 0,73 m LW T14", pituus: 0.68, paino: 3.1},
+    { haku: "1m jokka", nimi: "U-jokka 1,00 m LW", pituus: 0.95, paino: 4.1}
+    
+    /*U-jokka 1,09 m LW	4,4
+    U-jokka 1,40 m, teräs LW T14	5,4
+    U-jokka vahv. 1,40 m, teräs LW T14	8,9
+    U-jokka vahv. 1,57 m LW T14	9,4
+    U-jokka vahv. 2,07 m LW T14	12,7
+    U-jokka vahv. 2,57 m LW T14	15,7
+    U-jokka vahv. 3,07 m LW T14	19*/
 ];
 
 
