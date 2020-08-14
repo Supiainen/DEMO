@@ -14,17 +14,17 @@
     <h1>Telineen lohkojen pituuslaskin</h1>
 
     <div>
-        <form id="form">
+        <form id="pituus">
             <label for="OsanNimi">&nbsp; Osa:</label>
-            <input class="kentät" type="text" id="massanlisäyssyöte" name="OsanNimi" value="2,5m juoksu"><br>
+            <input class="kentät" type="text" id="lohkonlisäyssyöte" name="OsanNimi" value="2,5m juoksu"><br>
             <label for="Määrä">Määrä:</label>
-            <input class="kentät" type="text" id="massanmääräsyöte" name="Määrä" value="2"><br><br>
+            <input class="kentät" type="text" id="lohkojenmääräsyöte" name="Määrä" value="2"><br><br>
             <input class="toimintonapit" type="button" value="Lisää" onclick="LisaaLohko();">
-            <input class="toimintonapit" type="button" value="Tyhjennä" onclick="TyhjennaTaulu();">
+            <input class="toimintonapit" type="button" value="Tyhjennä" onclick="TyhjennaPituusTaulu();">
         </form>
 
         <h2>Kokonaispituus</h2>
-        <p id="Kokonaispituus" class="toimintonapit">0cm</p>
+        <p id="kokonaispituus" class="toimintonapit">0cm</p>
         
         <ul id="pituuslista">
 
