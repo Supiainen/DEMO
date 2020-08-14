@@ -11,7 +11,27 @@
 
 <body>
     <input class="toimintonapit" type= "button" value="<" onclick="Alkuun()" />
-    
+    <h1>Telineen lohkojen pituuslaskin</h1>
+
+    <div>
+        <form id="form">
+            <label for="OsanNimi">&nbsp; Osa:</label>
+            <input class="kentät" type="text" id="massanlisäyssyöte" name="OsanNimi" value="2,5m juoksu"><br>
+            <label for="Määrä">Määrä:</label>
+            <input class="kentät" type="text" id="massanmääräsyöte" name="Määrä" value="2"><br><br>
+            <input class="toimintonapit" type="button" value="Lisää" onclick="LisaaLohko();">
+            <input class="toimintonapit" type="button" value="Tyhjennä" onclick="TyhjennaTaulu();">
+        </form>
+
+        <h2>Kokonaispituus</h2>
+        <p id="Kokonaispituus" class="toimintonapit">0cm</p>
+        
+        <ul id="pituuslista">
+
+        </ul>
+
+    </div>
+
     <script src="site.js"></script>
 </body>
 </html>

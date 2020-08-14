@@ -50,34 +50,31 @@ var kokonaisMassa = 0;
 function TyhjennaTaulu() {
     document.getElementById('massalista').innerHTML = '';
     document.getElementById('summapaikka').innerHTML = '0kg';
-
+    
 };
 
 
 function LisaaMassaa() {
     osienLisaysKentta = document.getElementById("massanlisäyssyöte").value;
     osienMaaraKentta = document.getElementById("massanmääräsyöte").value;
-
-    for (let index = 0; index < juoksuLista.length; index++) {
-        const element = juoksuLista[index];
-        if (element.haku.toUpperCase() == osienLisaysKentta.toUpperCase()) {
-            kokonaisMassa += osienMaaraKentta * element.paino;
-            document.getElementById("summapaikka").innerHTML = kokonaisMassa + "kg";
-            document.getElementById("massalista").innerHTML += "<li>" + osienMaaraKentta + " kpl " +
-                element.nimi + "- Oikea pituus: " + element.pituus + ", Osan massa: " + element.paino;
-
+    var listaLista = [juoksuLista, jokatLista, tasotLista];
+    var listapaikka = listaLista[0];
+    var listaListanIndex = 0;  
+    
+    for (let i = 0; i < listaLista.length; i++) {     
+        
+        for (let index = 0; index < listapaikka.length; index++) {
+            const element = listapaikka[index];
+            if (element.haku.toUpperCase().trim() == osienLisaysKentta.toUpperCase().trim()) {
+                kokonaisMassa += osienMaaraKentta * element.paino;
+                document.getElementById("summapaikka").innerHTML = kokonaisMassa + "kg";
+                document.getElementById("massalista").innerHTML += "<li>" + osienMaaraKentta + " kpl " +
+                    element.nimi + "- Oikea pituus: " + element.pituus + ", Osan massa: " + element.paino;            
+            }
         }
-    }
-
-    for (let index = 0; index < jokatLista.length; index++) {
-        const element = jokatLista[index];
-        if (element.haku.toUpperCase() == osienLisaysKentta.toUpperCase()) {
-            kokonaisMassa += osienMaaraKentta * element.paino;
-            document.getElementById("summapaikka").innerHTML = kokonaisMassa + "kg";
-            document.getElementById("massalista").innerHTML += "<li>" + osienMaaraKentta + " kpl " +
-                element.nimi + "- Oikea pituus: " + element.pituus + ", Osan massa: " + element.paino;
-        }
-    }
+        listaListanIndex++;
+        listapaikka=listaLista[listaListanIndex];
+    }   
 
 
 };
@@ -85,6 +82,7 @@ function LisaaMassaa() {
 // Pituuslaskuri
 
 // Tästä alkaa osalistat
+
 
 var juoksuLista = [
     { haku: "4m juoksu", nimi: "Juoksu 4,14 m, teräs LW", pituus: 4.09, paino: 13.4 },
@@ -102,8 +100,8 @@ var jokatLista = [
     { haku: "1m jokka", nimi: "U-jokka, vahv. 1,09 m", pituus: 1.09, paino: 5.7 },
     { haku: "3m vahvari", nimi: "U-jokka vahv. 3,07 m LW T14", pituus: 1.40, paino: 19.0 },
     { haku: "0,45 jokka", nimi: "U-jokka 0,45 m LW T14", pituus: 0.40, paino: 2.1 },
-    { haku: "0,73 jokka", nimi: "U-jokka 0,73 m LW T14", pituus: 0.68, paino: 3.1},
-    { haku: "1m jokka", nimi: "U-jokka 1,00 m LW", pituus: 0.95, paino: 4.1}
+    { haku: "0,73 jokka", nimi: "U-jokka 0,73 m LW T14", pituus: 0.68, paino: 3.1}
+    
     
     /*U-jokka 1,09 m LW	4,4
     U-jokka 1,40 m, teräs LW T14	5,4
@@ -113,5 +111,9 @@ var jokatLista = [
     U-jokka vahv. 2,57 m LW T14	15,7
     U-jokka vahv. 3,07 m LW T14	19*/
 ];
+var tasotLista = [
+    {haku: "3m taso", nimi: '3m terästaso', pituus: 3.07, paino: 15},
+    {haku: "2,5m taso", nimi: '2,5m terästaso', pituus: 2.57, paino: 15}
+]
 
 

@@ -21,20 +21,22 @@ div {
 }
 
 h1 {
-  
-    text-shadow: 0px 7px 14px #272222;
-    font-size: 5vw;
-    font-family: "Georgia, serif";
+    
+  text-shadow: 0px 7px 14px #272222;
+  font-size: 5vw;
+  font-family: "Georgia, serif";
 }
 
 #takasin{
   position: absolute!important;
-  left:100px!important;
+  margin-left:-300px!important;
 }
 
 html {
   font-size: 14px;
   font-family: "Lucida Console", Courier, monospace;
+  position: relative;
+  min-height: 100%;
 }
 @media (min-width: 768px) {
   html {
@@ -47,21 +49,11 @@ html {
   }
 }
 
-/*button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}*/
-
-html {
-  position: relative;
-  min-height: 100%;
-  
-}
 li {
   margin: 5px;
   background-color: #dbe6c4;
   color:#757d6f;;
-  padding: 2px;
+  padding: 2px;  
 }
 
 body {    
@@ -69,10 +61,9 @@ body {
     padding-left: 20vw;
     padding-right: 20vw;
     padding-top: 50px;    
-    background-color: #dbe6c4;
+    background-color: #dbe6c4;    
     text-align: center;
     font-family: "Lucida Console", Courier, monospace;
-    background-image: url("kuvat\1.png");
 }
 .footer {
   position: absolute;   
@@ -84,19 +75,20 @@ body {
 
 .toimintonapit {
     box-shadow: inset 0px 11px 14px -3px #f2fadc;
+    
     background: linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
     background-color: #dbe6c4;
     border-radius: 6px;
     border: 1px solid #b2b8ad;
     display: inline-block;
     cursor: pointer;
-    color: #757d6f;
+    color: #757d6f;  
     font-family: Verdana;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     padding: 12px 33px;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #ced9bf;
+    text-shadow: 0px 2px 0px #ced9bf;
     margin: 15px 1vw 15px 1vw;
     box-shadow: 0 .25rem 0.75rem rgba(0, 0, 0, .5);
 }
