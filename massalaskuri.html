@@ -1,8 +1,9 @@
 ﻿<!DOCTYPE html>
 
 <html>
-<head>   
-       
+
+<head>
+
     <title>Massalaskuri</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="site.css">
@@ -10,7 +11,7 @@
 </head>
 
 <body>
-    <input class="toimintonapit" type= "button" value="<" onclick="Alkuun()" /> 
+    <input style="margin-top: -20px;" class="toimintonapit" type="button" id="back" value="<" onclick="Alkuun()" />
     <h1>Telineen massalaskuri</h1>
 
     <div>
@@ -18,19 +19,26 @@
             <label for="OsanNimi">&nbsp; Osa:</label>
             <input class="kentät" type="text" id="massanlisäyssyöte" name="OsanNimi" value="2,5m juoksu"><br>
             <label for="Määrä">Määrä:</label>
-            <input class="kentät" type="text" id="massanmääräsyöte" name="Määrä" value="10"><br><br>
+            <input class="kentät" type="text" id="massanmääräsyöte" name="Määrä" value="10"><br>
             <input class="toimintonapit" type="button" value="Lisää" onclick="LisaaMassaa();">
             <input class="toimintonapit" type="button" value="Tyhjennä" onclick="TyhjennaTaulu();">
         </form>
 
         <h2>Kokonaismassa</h2>
         <p id="summapaikka" class="toimintonapit">0kg</p>
-        
+
         <ul id="massalista">
 
         </ul>
-    </div>    
-    
+    </div>
+
+    <footer class="footer">
+
+        <p>Copyrigh Torsbjoun</p>
+
+    </footer>
+
     <script src="site.js"></script>
 </body>
+
 </html>
