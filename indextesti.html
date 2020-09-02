@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Osalista</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="site.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-device-width:401px) and (max-device-width:400px)" href="site.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+       
+    <h1>INFOA TELINEOSISTA</h1>
+    <p style="color:white; font-size: 3vw; text-shadow: 0px 7px 14px #272222;">Kaikki tieto mitä <strong>Layherin</strong> osista tarvitset</p>
+        
+    <div>
+
+        <div>
+            
+            <input style="font-size: 20px;" class="toimintonapit" type= "button" value="Tyhjennä lista" onclick="TyhjennaLista()" />
+            <p>Valitse kategoria <i class='fas fa-angle-right'></i> valitse määrä <i class='fas fa-angle-right'></i> valitse osa.</p>         
+        </div>
+        
+        <div>
+            <input class="toimintonapit" type= "button" value="- Juoksut" onclick="PalautaOsaLista(juoksuLista)" />
+            <input class="toimintonapit" type= "button" value="- Jokat/Vahvarit" onclick="PalautaOsaLista(jokatLista)" />
+            <input class="toimintonapit" type= "button" value="- Tasot" onclick="PalautaOsaLista(tasotLista)" />
+            <input class="toimintonapit" type= "button" value="- Pystyt" onclick="PalautaOsaLista(pystytLista)" />
+            <input class="toimintonapit" type= "button" value="- Ristikot" onclick="PalautaOsaLista(ristikkoLista)" />
+            <input class="toimintonapit" type= "button" value="- Ulokkeet" onclick="PalautaOsaLista(ulokeLista)" />
+            <input class="toimintonapit" type= "button" value="- Vinot" onclick="PalautaOsaLista(vinoLista)" />
+            <input class="toimintonapit" type= "button" value="- Liittimet" onclick="PalautaOsaLista(liitinLista)" />
+            <input class="toimintonapit" type= "button" value="- Kulkutiet" onclick="PalautaOsaLista(kulkuLista)" />
+            <input class="toimintonapit" type= "button" value="- Jalkalista" onclick="PalautaOsaLista(jalkaLista)" />
+            <input class="toimintonapit" type= "button" value="- Erikoisosat" onclick="PalautaOsaLista(erikoisLista)" /><br><br>
+            <input id="slider" class="vieritin" type="range" min="1" max="150" value="50" onclick="paivitaSlider(this.value)">
+            <p><span id="kappaletta">50</span>&nbsp; kpl valittu</p>
+            <p> Osien kokonaismassa = <span id="kokonaismassa" class="lista">0</span>kg</p>
+            <p> Osien kokonaispituus ensimmäisen pystyn keskeltä viimeisen pystyn keskelle = <span id="kokonaispituus">0</span> metriä (12,4cm lisäksi reikälevyistä kumpaankin päähän lisää) </p>
+
+            <div class="lista">
+                <ul id="osat"></ul><br />
+                <h4> Valitut osat </h4>
+                <ul id="valitut" class="button" style="float: left;"></ul>
+            </div>
+            
+        </div>
+        
+        <footer class="footer">
+            
+            <p>Copyrigh Torsbjoun &nbsp;<img style="height:35px; margin-bottom:-13px; margin-top:-10px;" src="kuvat/programming.gif" /></p>
+            
+        </footer>
+    </div>
+        
+        <script src="site.js"></script>
+    </body>
+    </html>

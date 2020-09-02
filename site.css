@@ -1,19 +1,45 @@
-﻿
-a.navbar-brand {
+﻿@media screen and (max-width: 400px) {
+  html {
+    font-size: 12px;
+  }
+  body{
+      padding-left: 2vw;
+      padding-right: 2vw;
+  }
+  div{
+      padding: 1px;
+  }
+  .osanappulat{
+    font-size: 10px;
+    padding: 2px;
+  }
+  .vieritin{
+    width: 80%;
+  }
+  .toimintonapit{
+      font-size:10px;
+  }
+}
+@media screen and (min-width: 401px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/*a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
-}
+}*/
 
 div {
   background-color: white;  
   background-repeat: no-repeat;
-  padding: 10px;   
+  padding: 5px;   
   border-radius: 5px; 
   margin: 10px;
+  
 }
-
-
 
 .kentät {
   padding: 5px;
@@ -38,31 +64,56 @@ html {
   position: relative;
   min-height: 100%; 
 }
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+
+li, laskurit {
+  margin: 5px;
+  background-color: rgb(253, 201, 201); 
+  padding: 1px;  
 }
-@media (max-width: 768px) {
-  html {
-    font-size: 12px;
-  }
+.lista{
+  text-align: left;
+  overflow:auto;
 }
 
-li {
-  margin: 5px;
-  background-color: rgb(253, 201, 201);  
-  padding: 2px;  
+
+.osanappulat{
+  font-size: 16px;
+  background-color: #fc9a4a;
+  padding: 2px;
+  margin: 1px;
+  display: block;
+  cursor: pointer;
+  
+}
+.osanappulat:hover{
+  background-color: rgb(248, 215, 153);  
+}
+
+.vieritin{
+  -webkit-appearance: none;
+  width: 50%;
+  height: 25px;
+  background: rgb(248, 215, 153);  
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.vieritin::-webkit-slider-thumb {
+  -webkit-appearance: none;  
+  width: 25px;
+  height: 25px;
+  background:black;
+  cursor: pointer;
 }
 
 body {
-  margin: 0;
+  margin: auto;
   min-height: 100%;    
   background-image: url("kuvat/scaffoldDark.jfif");  
   background-repeat: repeat-y;    
   background-size: 100%;   
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
   padding-top: 50px;
   min-height: 80%;   
   opacity: 0.90; 
@@ -71,38 +122,36 @@ body {
   
 }
 .footer {
-  background: linear-gradient(to right,  rgb(253, 201, 201) 10%,#ff7403 100%);
+  background: linear-gradient(to right,  rgb(248, 215, 153) 10%,#ff7403 100%);
   position: fixed;   
   bottom: 0;
   left: 0px;
   width: 100%;
   white-space: nowrap;
-  line-height: 50px; 
+  line-height: 15px;
+  margin-top:20px;
   
 }
 
 .toimintonapit {
      
-    background: linear-gradient(to right,  rgb(253, 201, 201) 10%,#ff7403 100%); 
-    background-color: #dbe6c4;
-    border-radius: 6px;
-    border: 1px solid #b2b8ad;
+    background: linear-gradient(to right, rgb(248, 215, 153) 10%,#ff7403 100%);     
+    border-radius: 5px;
+    border: 1px solid black;
     display: inline-block;
-    cursor: pointer;
-    color: white;  
+    cursor: pointer;    
     font-family: Verdana;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 33px;
+    font-size: 18px;    
+    padding: 2px 10px;
     text-decoration: none;
-    text-shadow: 0px 1px 1px #000000;
-    margin: 10px 1vw 10px 1vw;
+    text-shadow: 1px 1px 1px #ffffff;
+    margin: 5px 0.5vw 5px 0.5vw;
     box-shadow:  0 .25rem 0.75rem rgba(0, 0, 0, .6);
 }
 
 .toimintonapit:hover {
-        background: linear-gradient(to right, #ff7403 40%, rgb(253, 201, 201)  100%);               
-        box-shadow:  0 .15rem 0.40rem rgba(0, 0, 0, .6);
+    background: linear-gradient(to right, #ff7403 40%, rgb(248, 215, 153)  100%);               
+    box-shadow:  0 .15rem 0.40rem rgba(0, 0, 0, .6);
 }
 
 .toimintonapit:active {
