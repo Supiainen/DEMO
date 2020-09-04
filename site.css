@@ -1,4 +1,10 @@
-﻿@media screen and (max-width: 400px) {
+﻿@media screen and (min-width: 415px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
   html {
     font-size: 12px;
   }
@@ -19,10 +25,8 @@
   .toimintonapit{
       font-size:10px;
   }
-}
-@media screen and (min-width: 401px) {
-  html {
-    font-size: 16px;
+  body{
+      background-image:url("Scaffold.png");
   }
 }
 
